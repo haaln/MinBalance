@@ -315,7 +315,7 @@ mod:modify_talent("we_waywatcher", 2, 3, {
     }
 })
 mod:modify_talent_buff_template("wood_elf", "kerillian_waywatcher_attack_speed_on_ranged_headshot_buff", {
-    duration = 10,
+    duration = 30,
 	multiplier = 0.20
 })
 
@@ -329,55 +329,15 @@ mod:modify_talent_buff_template("wood_elf", "kerillian_waywatcher_attack_speed_o
 -- Battle Wizard Talents
 -- Battle Wizard Talents
 mod:modify_talent_buff_template("bright_wizard", "sienna_adept_damage_reduction_on_ignited_enemy_buff", {
-    multiplier = -0.05, -- -0.1,
-	max_stacks = 3
+    multiplier = -0.01, -- -0.1,
+	max_stacks = 1
 })
 mod:modify_talent("bw_adept", 5, 1, {
     description = "rebaltourn_sienna_adept_damage_reduction_on_ignited_enemy_desc",
     description_values = {
         {
             value_type = "percent",
-            value = -0.05 --BuffTemplates.sienna_adept_damage_reduction_on_ignited_enemy_buff.multiplier
+            value = -0.01 --BuffTemplates.sienna_adept_damage_reduction_on_ignited_enemy_buff.multiplier
         }
     },
 })
-mod:add_text("rebaltourn_sienna_adept_damage_reduction_on_ignited_enemy_desc", "Igniting an enemy reduces damage taken by 5%% for 5 seconds. Stacks up to 4 times.")
-
-mod:modify_talent_buff_template("bright_wizard", "sienna_adept_cooldown_reduction_on_burning_enemy_killed", {
-    cooldown_reduction = 0.01 --0.03
-})
-mod:modify_talent("bw_adept", 5, 2, {
-    description = "rebaltourn_sienna_adept_cooldown_reduction_on_burning_enemy_killed_desc",
-    description_values = {
-        {
-            value_type = "percent",
-            value = 0.01 --BuffTemplates.sienna_adept_cooldown_reduction_on_burning_enemy_killed.cooldown_reduction
-        }
-    },
-})
-mod:add_text("rebaltourn_sienna_adept_cooldown_reduction_on_burning_enemy_killed_desc", "Killing a burning enemy reduces the cooldown of Fire Walk by 1%%. 0.5 second cooldown.")
-
-mod:modify_talent("bw_adept", 6, 2, {
-    description = "rebaltourn_sienna_adept_activated_ability_explosion_desc",
-	buffs = {
-        "sienna_adept_activated_ability_explosion_buff"
-    },
-})
-mod:add_text("rebaltourn_sienna_adept_activated_ability_explosion_desc", "Fire Walk explosion radius and burn damage increased. No longer leaves a burning trail. Cooldown of Fire Walk reduced by 20%%.")
-
-mod:add_talent_buff_template("bright_wizard", "sienna_adept_activated_ability_explosion_buff", {
-    stat_buff = "activated_cooldown",
-	multiplier = -0.2
-})
-mod:modify_talent("bw_adept", 6, 3, {
-    buffs = {
-		"sienna_adept_increased_ult_cooldown"
-	}
-})
-mod:add_talent_buff_template("bright_wizard", "sienna_adept_increased_ult_cooldown", {
-	remove_buff_func = "remove_modify_ability_max_cooldown",
-	apply_buff_func = "add_modify_ability_max_cooldown",
-	multiplier = 0.5
-})
-mod:add_text("sienna_adept_ability_trail_double_desc", "Fire Walk can be activated a second time within 10 seconds. Increases the cooldown of Fire Walk by 50.0%%.")
-
