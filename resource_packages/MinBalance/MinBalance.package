@@ -1,0 +1,11 @@
+mod = [
+	"MinBalance"
+]
+
+package = [
+	"resource_packages/MinBalance/MinBalance"
+]
+
+lua = [
+	"scripts/mods/MinBalance/*"
+]
