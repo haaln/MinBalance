@@ -1,4 +1,6 @@
 # MinBalance
-A mod that nerfs overperformers to the ground. 
+A minimal balance mod inspired from other more mature mods that nerfs overperformers ~~to the ground~~ and brings them in line with other weapons/abilities.
 
-Watch how coru bw's and mwp rv's squirm in futility.
+#### Disclaimer
+
+__note:__ currently unmaintained and most likely obsolete/moot (2025-04-05)
